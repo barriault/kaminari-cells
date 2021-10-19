@@ -13,7 +13,7 @@ ActiveSupport.on_load :action_view do
         include Cell::ViewModel::Partial
 
         def paginate(scope, paginator_class: Kaminari::Helpers::Paginator, template: nil, **options)
-          options = options.reverse_merge(:views_prefix => "../views/")
+          # options = options.reverse_merge(:views_prefix => "../views/")
           super
         end
       end
