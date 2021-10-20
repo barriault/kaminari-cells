@@ -1,7 +1,7 @@
-require "cells"
-require "kaminari/helpers/helper_methods"
-require "kaminari/cells/version"
-require "cell/partial"
+require 'cells'
+require 'kaminari/helpers/helper_methods'
+require 'kaminari/cells/version'
+require 'cell/partial'
 
 ActiveSupport.on_load :action_view do
   module Kaminari
@@ -12,8 +12,8 @@ ActiveSupport.on_load :action_view do
         include ActionView::Helpers::TranslationHelper
         include Cell::ViewModel::Partial
 
-        def paginate(scope, options = {}, &block)
-          options = options.reverse_merge(:views_prefix => "../views/")
+        def paginate(scope, paginator_class: Kaminari::Helpers::Paginator, template: nil, **options)
+          # options = options.reverse_merge(:views_prefix => "../views/")
           super
         end
       end

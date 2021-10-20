@@ -13,7 +13,7 @@ class KaminariCellsTest < ActionController::TestCase
   setup do
     @routes = Rails.application.routes
 
-    50.times {|i| User.create! :name => "user#{i}"}
+    50.times { |i| User.create! name: "user#{i}" }
   end
 
   # TODO: test concept cells
@@ -22,7 +22,7 @@ class KaminariCellsTest < ActionController::TestCase
   #   assert_equal "<p>1</p>\n\n", @response.body
   # end
 
-  test "rendering view model cell" do
+  test 'rendering view model cell' do
     get :show, params: { id: 1 }
     assert_equal "<p>1</p>\n", @response.body
   end
