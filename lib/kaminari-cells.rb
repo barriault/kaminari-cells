@@ -1,7 +1,7 @@
-require "cells"
-require "kaminari/helpers/helper_methods"
-require "kaminari/cells/version"
-require "cell/partial"
+require 'cells'
+require 'kaminari/helpers/helper_methods'
+require 'kaminari/cells/version'
+require 'cell/partial'
 
 ActiveSupport.on_load :action_view do
   module Kaminari
