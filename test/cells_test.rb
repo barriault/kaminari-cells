@@ -6,7 +6,6 @@ require 'test_helper'
 #   append_view_path "test/fake_app/app-cells/"
 # end
 
-
 class KaminariCellsTest < ActionController::TestCase
   tests UsersController
 
