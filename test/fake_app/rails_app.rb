@@ -9,10 +9,11 @@ require 'active_record'
 
 # config
 app = Class.new(Rails::Application)
+app.config.load_defaults 6.1
 app.config.secret_token = '3b7cd727ee24e8444053437c36cc66c4'
 app.config.session_store :cookie_store, key: '_myapp_session'
 app.config.active_support.deprecation = :log
-app.config.eager_load = false
+app.config.eager_load = true
 app.config.root = File.dirname(__FILE__)
 Rails.backtrace_cleaner.remove_silencers!
 app.initialize!
@@ -25,7 +26,7 @@ app.routes.draw do
 end
 
 ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: ':memory:')
-ActiveRecord::Base.logger = Logger.new(STDOUT)
+ActiveRecord::Base.logger = Logger.new($stdout)
 
 ActiveRecord::Schema.define do
   create_table(:users) do |t|
@@ -46,6 +47,7 @@ end
 
 # controllers
 class ApplicationController < ActionController::Base; end
+
 class UsersController < ApplicationController
   def show
     @users = User.all.page params[:page]
