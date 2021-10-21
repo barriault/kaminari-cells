@@ -3,7 +3,7 @@ require 'kaminari/helpers/helper_methods'
 require 'kaminari/cells/version'
 require 'cell/partial'
 
-ActiveSupport.on_load :action_view do
+ActiveSupport.on_load(:action_view) do
   module Kaminari
     module Helpers
       module CellsHelper

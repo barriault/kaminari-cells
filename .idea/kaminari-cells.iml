@@ -12,6 +12,7 @@
     <orderEntry type="jdk" jdkName="RVM: ruby-3.0.2 [kaminari-cells]" jdkType="RUBY_SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, RVM: ruby-3.0.2 [kaminari-cells]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.17.3, RVM: ruby-3.0.2 [kaminari-cells]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cells (v4.1.7, RVM: ruby-3.0.2 [kaminari-cells]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cells-erb (v0.1.0, RVM: ruby-3.0.2 [kaminari-cells]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="cells-rails (v0.1.4, RVM: ruby-3.0.2 [kaminari-cells]) [gem]" level="application" />
